@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design/studentUI_style.css">
+</head>
+<body>
+    <header class="main-header"> 
+        <img class="imglogo" src=image/PUPLogo.png>
+        <div class="header"> 
+            <h2> POLYTECHNIC UNIVERSITY OF THE PHILIPPINES </h2>     
+            <p class="text1"> BIÑAN CAMPUS </p>
+        </div>
+    </header>
+
+<img class="pup" src="image/pup.jpg">
+
+
+ <!-- for table -->
+<div class="container">
+    <div class="tbl-container">
+        <table id="tbl_room">
+        <tr>
+        <th colspan="5" class="thead" > 
+        <?php 
+        echo "<p id='date'>" . date("l")."," ." ". date("Y/m/d") ."</p>";               
+        ?>    
+        </th>
+        </tr>
+        <tr>
+            <td>5th Floor</td>
+            <td class="modalBtn">504</td>
+            <td class="modalBtn">503</td>
+            <td class="modalBtn">502</td>
+            <td id="modalBtn">501</td>
+        </tr>
+        <tr>
+            <td>4th Floor</td>
+            <td id="modalBtn">404</td>
+            <td id="modalBtn">403</td>
+            <td id="modalBtn">402</td>
+            <td id="modalBtn">401</td>
+        </tr>
+        <tr>
+            <td>3rd Floor</td>
+            <td id="modalBtn">304</td>
+            <td id="modalBtn">303</td>
+            <td id="modalBtn">302</td>
+            <td id="modalBtn">301</td>
+        </tr>
+        <tr>
+            <td>2nd Floor</td>
+            <td id="modalBtn">204</td>
+            <td id="modalBtn">203</td>
+            <td id="modalBtn">202</td>
+            <td id="modalBtn">201</td>
+        </tr>
+        <tr>
+            <td>1st Floor</td>
+            <td id="modalBtn">Library</td>
+            <td></td>
+            <td id="modalBtn">Office</td>
+            <td id="modalBtn">Clinic/Faculty</td>
+        </tr>
+        </table>
+    </div>
+
+    <div class="res-container">
+        <div class="side-container">
+            <div>
+                <img src="image/reserve.svg" class="img-side">
+                  <button class="btnSide" id="resModalBtn"> reserve</button>
+            </div>
+            <div>
+                <img src="image/logout.svg" class="img-side">
+             <a href="index.html"> <button class="btnSide"> logout</button> </a>
+            </div>
+            <div>
+                <img src="image/about.svg" class="img-side">
+                <button class="btnSide" id="aboutBtn"> about</button>
+             </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+<!-- FOR CHECKING ROOM AVAILABILITY -->
+<div id="simpleModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+        <span class="closeBtn">&times;</span>
+        <h2>ROOM DESCRIPTION</h2>
+       </div>
+       <div class="modal-body">
+            <form action="#">  
+                   <div>
+                       <h5>ROOM NO:</h5>
+                       <input type="text" readonly>
+                   </div>
+                   <div>
+                       <h5>PROFESSOR NAME:</h5>
+                       <input type="text" readonly>
+                   </div>
+                   <div>
+                       <h5>DATE AND TIME:</h5>
+                       <input type="text" readonly>
+                   </div>
+                   <div>
+                       <h5>COURSE:</h5>
+                       <input type="text" readonly>
+                   </div>
+                   <div>
+                       <h5>SUBJECT CODE:</h5>
+                       <input type="text" readonly>
+                   </div>
+            </form>
+       </div>
+       <div class="modal-footer">
+           
+       </div>
+    </div>
+   </div>
+
+<!-- FOR ROOM RESERVATION -->
+<div id="simpleModal1" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+        <span class="closeBtn1">&times;</span>
+        <h2>ROOM RESERVATION</h2>
+       </div>
+       <div class="modal-body">
+            <form action="#">  
+                   <div>
+                       <h5>ROOM NO:</h5>
+                       <input type="text" placeholder="ENTER ROOM NO" >
+                   </div>
+                   <div>
+                       <h5>PROFESSOR NAME:</h5>
+                       <input type="text" placeholder="ENTER PROF NAME">
+                   </div>
+                   <div>
+                       <h5>DATE AND TIME:</h5>
+                       <input type="datetime-local">
+                   </div>
+                   <div>
+                       <h5>COURSE:</h5>
+                       <input type="text" placeholder="ENTER YR & COURSE" >
+                   </div>
+                   <div>
+                       <h5>SUBJECT CODE:</h5>
+                       <input type="text" placeholder="ENTER SUBJECT CODE" >
+                   </div>
+   
+            </form>
+       </div>
+       <div class="modal-footer">
+            <button class="btnFooter">reserve</button>
+            <input type="reset" value="RESET" class="btnFooter">
+       </div>
+    </div>
+   </div>
+
+   <!-- MODAL FOR ABOUT -->
+<div id="simpleModal2" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+        <span class="closeBtn2">&times;</span>
+        <h2>ABOUT</h2>
+       </div>
+       <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias autem, magnam esse accusamus
+             facere consequuntur amet reiciendis voluptas
+            libero ab aliquid nulla obcaecati ea facilis voluptates nemo consequatur! Repudiandae, minima?
+       </div>
+       <div class="modal-footer">
+           
+       </div>
+    </div>
+</div>
+
+   <script type="text/javascript"  src="script/student.js"></script>
+</body>
+</html>
